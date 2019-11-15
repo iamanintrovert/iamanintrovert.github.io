@@ -1,0 +1,58 @@
+1. changed fonts to PT sans and size in
+    - _variables.scss
+    - _includes/head/custom/html according to https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/
+    - _masthead.scss
+    - _reset.scss
+
+2. for fotsizes
+   - check font scale in _variables.scss
+
+2. nav bar height
+   - _masthead.scss
+   - _navigation.scss
+
+3. site specific images
+   - /assets/site-images
+   - _variables.scss
+   - _sidebar.scss
+
+4. sidebar sticky width
+   - _sidebar.scss -> .author__bio{}
+
+5. list item spacing
+   - _base.scss
+
+6. change in footer
+   - _includes/footer.html
+   - _footer.scss
+
+7. use portfolio like structure for blog
+   - _blog pages each will collect blogs by its type
+   - in _page a page will collect each pages (type of blog)
+   - teaser image (set in _blog pages) can be used for nice display of collection of blog types
+
+8. adding mathjax
+   - https://quuxplusone.github.io/blog/2018/08/05/mathjax-in-jekyll/
+   - add the codes in _includes/custom.html
+
+9. publication bibtex toggle
+   - style code added in _sass/_base.scss
+   - javascript code added in _includes/custom.html
+   - publicatios.html layout in _layouts. For controlling the list seperation space of publications.
+
+10. increase main content width for x-large screen
+   - $conten-width-padding-x-large in _variables.scss
+   - _archive.scss, _page.scss
+
+11. post arrangement
+   - use collection(protfolio) style page to group different catagories of posts
+   - use category layout to group to gether same categories (in those portfolio pages)
+
+12. it is better to have at least one YAML enty (permalink:) in files under _pages
+
+13. root index.html
+   - have title: " " in the YAML
+   - otherwise site title in the browser tab will say 'My CV' page title !
+
+14. changed index.html to index.md
+   - turn  off pagination in _config.yaml by commenting out two lines
