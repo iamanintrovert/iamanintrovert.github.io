@@ -39,3 +39,122 @@ I use python in anaconda environtment.
 * `t` also has to be `Symbol('t')` type.
 * looks like skillbridge cannot process datatype returned by `select_result()`. But the function evalues fine. Since the returned data is not needed anyway, `select_result()` is placed in a `try` block so that python script does not run into error.
 * if you have your own skillfunctions registered make sure that those files are loaded in Virtuoso using `load()` before using those functions.
+* for easier OCEAN script to python script conversion, do a simulation in ADE and `session->save ocean` and from that OCEAN script start converting functions to python.
+
+## Example code
+`utils.py`
+```python
+from skillbridge import Workspace
+from skillbridge.client.functions import Function
+
+# any values in ocean containing apostrophe like 'tran use Symbol('tran') in python
+# use Symbol('tran') to set 'tran ; client.translator import Symbol
+
+def define_ocean_functions(ws):
+    ws.user += Function('simulator', 'ocean simulator()', set())
+    ws.user += Function('design', 'ocean design()', set())
+    ws.user += Function('resultsDir', 'ocean design()', set())
+    ws.user += Function('modelFile', 'ocean design()', set())
+    ws.user += Function('analysis', 'ocean analysis()', set()) 
+    ws.user += Function('desVar', 'ocean desVar()', set())
+    ws.user += Function('envOption', 'ocean envOption()', set())
+    ws.user += Function('save', 'ocean save()', set())
+    ws.user += Function('converge', 'ocean converge()', set())
+    ws.user += Function('temp', 'ocean temp()', set())
+    ws.user += Function('run', 'ocean run()', set())
+    ws.user += Function('selectResult', 'ocean selectResult()', set())
+    
+    
+model_files = [
+    ["/path/to/models/Spectre/design.scs", ""],
+    ["/path/to/models/Spectre/allModels.scs", "tt"],
+    ["/path/to/models/Spectre/wafer.scs", ""]
+    ]
+```
+`main_file.py`
+```python
+from skillbridge import Workspace
+from skillbridge.client.translator import Symbol
+import numpy as np
+import matplotlib.pyplot as plt
+import utils
+
+def waveform_to_vector(waveforms):
+    vectors =[]
+    global ws
+    for wave in waveforms:
+        y_wave = ws.dr.get_waveform_y_vec(wave)
+        y_vec = []
+        for i in range(ws.dr.vector_length(y_wave)):
+            y_vec.append(ws.dr.get_elem(y_wave, i))
+        vectors.append(y_vec)
+        
+    # x vector is same for all these y vector
+    x_wave = ws.dr.get_waveform_x_vec(wave)
+    x_vec = []
+    for i in range(ws.dr.vector_length(x_wave)):
+        x_vec.append(ws.dr.get_elem(x_wave, i))
+        
+    return vectors, x_vec
+
+##########
+vdd = 1
+INa = 10e-9
+vth = 350e-3
+v_syn_p = 854e-3
+v_syn_n = 100e-3
+vwidth = 750e-3
+vrfc = 80e-3
+cap = 50e-15
+###initial cond#####
+v = 0
+u = 0
+##################
+
+# connect to server
+ws = Workspace.open()
+# register required ocean functions
+utils.define_ocean_functions(ws)
+
+# set simulator
+ws.user.simulator(Symbol('spectre'))
+# set schematic
+ws.user.design('/tmp/simulation/for_brian_sim_neuron_tran/spectre/schematic/netlist/netlist')
+# set model files
+ws.user.model_file(utils.model_files[0],utils.model_files[1],utils.model_files[2])
+# transient analysis
+stop_time = '10m'
+ws.user.analysis(Symbol('tran'),'?stop',stop_time)
+# set design variables
+ws.user.des_var(	  "cap", cap	)
+ws.user.des_var(	  "v_syn_n", v_syn_n	)
+ws.user.des_var(	  "v_syn_p", v_syn_p	)
+ws.user.des_var(	  "vrfc", vrfc	)
+ws.user.des_var(	  "INa", INa	)
+ws.user.des_var(	  "vdd", vdd	)
+ws.user.des_var(	  "vth", vth	)
+ws.user.des_var(	  "vwidth", vwidth	)
+# analysis order in case of multiple analysis
+ws.user.env_option(Symbol('analysisOrder'), ['tran'])
+# to be saved currents
+ws.user.save( Symbol('i'), "/syn_p/D", "/syn_n/D", "/pos_feed/D", "/neg_feed/D", "/width_p/D", "/refrac_n/D" )
+# set initial conditions
+ws.user.converge( Symbol('ic'), "/v", '%f'%(v))
+ws.user.converge( Symbol('ic'), "/u", '%f'%(u))
+# set temp and run
+ws.user.temp(27)
+ws.user.run()
+try: # skillbridge cannot parse stdobj@0xhexnumber type data. But I don't need any parsing of that data so keeping it in try to prevent error
+    ws.user.select_result(Symbol('tran')) 
+except:
+    print('stdobj0x type data encountered! nothing to panic about.')
+# extract waveforms
+waveforms = [ws.get.data('/v'), ws.get.data('/u')]
+
+# plot
+vec, time = waveform_to_vector(waveforms)
+plt.plot(time, vec[0])
+plt.plot(time, vec[1])
+plt.show()
+```
+
