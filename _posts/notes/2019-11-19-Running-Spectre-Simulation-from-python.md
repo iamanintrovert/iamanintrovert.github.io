@@ -12,7 +12,7 @@ Running Virtuoso Spectre simulation using OCEAN scripts can be very powerful way
 ## skillbridge structure
 skillbridge sets up a python server from Virtuoso which takes instructions from python script, sends it to Virtuoso SKILL console and returns restuls back to python script. It allows calling SKILL schematic/layout functions from python. Python equivalent of SKILL functions are structured by their prefix. For example SKILL function `geGetEditCellView()` has prefix `ge` and all the functions begining with `ge` prefix will be grouped under `ge` in python. So from python that function would be `ge.get_edit_cell_view()` as explained in the [documentation](https://unihd-cag.github.io/skillbridge/examples/basic.html). 
 
-That is great! But I also needed to access the OCEAN functions from python too. OCEAN functions are not structured with prefixes like schematic/layout functions for example `run()`,`simulator()` etc. so they are not accessible. 
+That is great! But I also needed to access the OCEAN functions from python too. OCEAN functions are not structured with prefixes like schematic/layout functions for example `run()`,`simulator()`, `modelFile()` etc. so they are not accessible. 
 
 ## Workaround
 Fortunately skillbridge allows for user function registration. One can register user defined SKILL functions. So I can use that functionality to register only those OCEAN functions that I need like this.
@@ -21,9 +21,9 @@ from skillbridge import Workspace
 from skillbridge.client.functions import Function
 
 ws = Workspace.open()
-ws.user += Function("run", "documentation string of some kind", set())
+ws.user += Function("modelFile", "documentation string of some kind", set())
 
-ws.user.run(...)
+ws.user.model_file(...)
 ```
 ## Workflow
 I use python in anaconda environtment.
@@ -33,4 +33,8 @@ I use python in anaconda environtment.
 * start spyder and write simulation code as one would write in OCEAN.
 
 ## Tips
-* if simulation is stopped midway in python then restart the python kernel. Otherwise simulation stops working.
+* if simulation is stopped midway (CTRL+C) in python then restart the python kernel. Otherwise simulation stops working.
+* function arguments are strings with comma seperation.
+* some OCEAN function requires arguments like `'spectre`, `'dcOp` with apostrophe in the front. Those has to be supplied as `skillbridge.client.translator.Symbol` class like `Symbol('dcOp')`.
+* `t` also has to be `Symbol('t')` type.
+* looks like skillbridge cannot process datatype returned by `select_result()`. But the function evalues fine. Since the returned data is not needed anyway, `select_result()` is placed in a `try` block so that python script does not run into error.
