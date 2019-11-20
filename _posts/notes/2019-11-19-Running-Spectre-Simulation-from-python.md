@@ -16,7 +16,7 @@ That is great! But I also needed to access the OCEAN functions from python too. 
 
 ## Workaround
 Fortunately skillbridge allows for user function registration. One can register user defined SKILL functions. So I can use that functionality to register only those OCEAN functions that I need like this.
-```
+```python
 from skillbridge import Workspace
 from skillbridge.client.functions import Function
 
@@ -38,3 +38,4 @@ I use python in anaconda environtment.
 * some OCEAN function requires arguments like `'spectre`, `'dcOp` with apostrophe in the front. Those has to be supplied as `skillbridge.client.translator.Symbol` class like `Symbol('dcOp')`.
 * `t` also has to be `Symbol('t')` type.
 * looks like skillbridge cannot process datatype returned by `select_result()`. But the function evalues fine. Since the returned data is not needed anyway, `select_result()` is placed in a `try` block so that python script does not run into error.
+* if you have your own skillfunctions registered make sure that those files are loaded in Virtuoso using `load()` before using those functions.
