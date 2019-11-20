@@ -25,3 +25,12 @@ ws.user += Function("run", "documentation string of some kind", set())
 
 ws.user.run(...)
 ```
+## Workflow
+I use python in anaconda environtment.
+* from a shell activate the environment where skillbridge is installed.
+* from that same shell start Virtuoso so that Virtuoso sees the same python envornment skillbridge is in. Make sure that License checkout is not set to prompt. From `Options->License->Ordering` set all to `always`. Otherwise everytime simulation is run, that annoying popup winodw appears to chose license and obstructs simulation.
+* Start python server from Virtuoso by `pyStartServer ?timeout nil`. Timeout value of `nil` sets the server to run forever unless it is killed mannually.
+* start spyder and write simulation code as one would write in OCEAN.
+
+## Tips
+* if simulation is stopped midway in python then restart the python kernel. Otherwise simulation stops working.
