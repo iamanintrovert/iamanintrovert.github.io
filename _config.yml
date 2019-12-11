@@ -116,15 +116,18 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:prince.juko@outlook.com
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://iamanintrovert.github.io"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/munir-hasan-058065138/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/iamanintrovert"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=X8Y3rQIAAAAJ&hl=en"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://iamanintrovert.github.io"
 
 # Site Footer
 footer:
