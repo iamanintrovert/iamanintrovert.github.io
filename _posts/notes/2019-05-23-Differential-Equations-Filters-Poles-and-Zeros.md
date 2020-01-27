@@ -114,7 +114,7 @@ $$
 
 &#8205;$$
 x(t) = \int_{-\infty}^{+\infty}X(s) e^{st}ds\\
-y(t) = \int_\infty^\infty H(s)X(s)e^{st}ds\\
+y(t) = \int_{-\infty}^{+\infty} H(s)X(s)e^{st}ds\\
 $$
 {: .column--right}
 
@@ -134,5 +134,5 @@ We have seen for stabilty we only need system poles. But what if the input itsel
 -----------------------------------
 [^1]: [Ordinary Differential Equations, Gabriel Nagy](https://users.math.msu.edu/users/gnagy/teaching/ode.pdf)
 [^2]: [Understanding Poles and Zeros](https://web.mit.edu/2.14/www/Handouts/PoleZero.pdf)
-[^3]: [Signals and Systems by Oppenheim, Willsky, 2nd Edition, pp.182] 
+[^3]: Signals and Systems by Oppenheim, Willsky, 2nd Edition, pp.182
 
