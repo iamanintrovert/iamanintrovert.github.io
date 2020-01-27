@@ -56,3 +56,6 @@
 
 14. changed index.html to index.md
    - turn  off pagination in _config.yaml by commenting out two lines
+   
+15. double column in posts
+   - added .column--left and .column--right in base.scss
