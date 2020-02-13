@@ -73,7 +73,7 @@ In general for a system modeled by differential equation
 $$
 \begin{align*}
 &a_n\frac{d^ny}{dt}+a_{n-1}\frac{d^{n-1}y}{dt} + \cdots + a_1\frac{dy}{dt} + a_0y = b_m\frac{d^mx}{dt}+b_{m-1}\frac{d^{m-1}x}{dt} + \cdots + b_1\frac{dx}{dt} + b_0x \\
-&a_ns^nY(s)+a_{n-1}s^{n-1}Y(s) + \cdots + a_1sY(s) + a_0 = b_ms^mX(s)+b_{m-1}s^{m-1}X(s) + \cdots + b_1sX(s) + b_0 \\
+&a_ns^nY(s)+a_{n-1}s^{n-1}Y(s) + \cdots + a_1sY(s) + a_0Y(s) = b_ms^mX(s)+b_{m-1}s^{m-1}X(s) + \cdots + b_1sX(s) + b_0X(s) \\
 &H(s) = \frac{b_ms^m+b_{m-1}s^{m-1} + \cdots + b_1s + b_0}{a_ns^n+a_{n-1}s^{n-1} + \cdots + a_1s + a_0}\\
 &H(s) = \frac{N(s)}{D(s)} = K\frac{(s-z_1)(s-z_2)\cdots(s-z_m)(s-z_{m-1})}{(s-p_1)(s-p_2)\cdots(s-p_n)(s-p_{n-1})}
 \end{align*}
@@ -87,7 +87,7 @@ $$K=\frac{b_m}{a_n}$$ is the gain of the filter/amplifer.
  $$
  \begin{align*}
  &a_n\frac{d^ny}{dt}+a_{n-1}\frac{d^{n-1}y}{dt} + \cdots + a_1\frac{dy}{dt} + a_0y = 0 \\
- &a_ns^nY(s)+a_{n-1}s^{n-1}Y(s) + \cdots + a_1sY(s) + a_0 = 0 \\
+ &a_ns^nY(s)+a_{n-1}s^{n-1}Y(s) + \cdots + a_1sY(s) + a_0Y(s) = 0 \\
  & a_ns^n+a_{n-1}s^{n-1} + \cdots + a_1s + a_0 = D(s) = 0 \\
  &(s-p_1)(s-p_2)\cdots(s-p_n)(s-p_{n-1}) = 0 \\
  &y_c(t) = \sum_{i=1}^nC_ie^{p_it}\\
