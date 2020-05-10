@@ -15,7 +15,8 @@ skillbridge sets up a python server from Virtuoso which takes instructions from 
 That is great! But I also needed to access the OCEAN functions from python too. OCEAN functions are not structured with prefixes like schematic/layout functions for example `run()`,`simulator()`, `modelFile()` etc. so they are not accessible. 
 
 ## Workaround
-The following function registration method is no longer valid after `skillbridge-1.0.4`. Any SKILL function can now be called directly using `ws['skillFunc'](...)` like statement. {: .notice--danger}
+The following function registration method is no longer valid after `skillbridge-1.0.4`. Any SKILL function can now be called directly using `ws['skillFunc'](...)` like statement.
+{: .notice--danger}
 
 Fortunately skillbridge allows for user function registration. One can register user defined SKILL functions. So I can use that functionality to register only those OCEAN functions that I need like this.
 ```python
