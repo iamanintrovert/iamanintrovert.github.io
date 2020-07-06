@@ -1,0 +1,35 @@
+---
+layout: archive
+---
+
+{% for entry in page.entries %}
+  <div class="cv--row">
+  <div class="cv--left">
+    <h2>{{entry.title}}</h2>
+  </div>
+  {% for item in entry.items %}
+  <div class="cv--right">
+    <div class="cv--item">
+      <b>{{item.title}}</b>
+    </div>
+    <div class="cv--item-year">
+      <i>{{item.year}}</i>
+    </div>
+    {{item.description}}
+  </div>
+  {% if item.list %}
+  <div class="cv--right">
+    <ul>
+    {% for item in item.list %}
+      <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+
+</div>
+{% endfor %}
+
+
