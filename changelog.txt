@@ -59,3 +59,7 @@
    
 15. double column in posts
    - added .column--left and .column--right in base.scss
+   
+16. resume page
+   - added css in base.scss
+   - added resume.html in _layouts
