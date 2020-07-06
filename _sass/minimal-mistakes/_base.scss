@@ -394,3 +394,37 @@ div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;
   float: right;
   width: 50%;
 }
+
+/*=============== CV related ==================*/
+.cv--row{
+  margin: 1em;
+  padding: 1em;
+  width: 100%;
+  //border: 1px solid green;
+  float: left;
+}
+
+.cv--left{
+  width: 30%;
+ // border: 1px solid green;
+  float: left;
+}
+.cv--right{
+  width: 70%;
+  //border: 1px solid green;
+  float: right;
+  padding-bottom: 1em;
+  //padding-left: 0.5em;
+}
+.cv--item{
+  width: 100%;
+ // border: 1px solid green;
+  float: left;
+  margin-right: -30%; // https://stackoverflow.com/questions/9227007/css-make-two-floating-elements-overlap/9228887
+}
+.cv--item-year{
+  //width: 30%;
+ // border: 1px solid green;
+  float: right;
+  //display: inline;
+}
