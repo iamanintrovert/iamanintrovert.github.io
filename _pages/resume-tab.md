@@ -53,10 +53,10 @@ entries:
         year: 
         description: 
         list:
-          - Bharatkumar S. Joshi Memorial Scholarship 2020
-          - Runner up at regional SS12 Asia 13 Code-A-Thon Challenge
+          - Bharatkumar S. Joshi Memorial Scholarship 2020, UNC Charlotte
+          - Runner up at regional SS12 Asia 13 Code-A-Thon Challenge, Bangladesh
           - Icon of the Month Award for the month of July 2014 at Samsung R&D Institute Bangladesh
-          - Runner up at district level mathematical olympiad in high school
+          - Runner up at district level mathematical olympiad in high school, Bangladesh
           
     - title: Technical<br>Skills
       items:
