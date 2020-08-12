@@ -7,6 +7,60 @@ permalink: /publications/
 You can also visit my [Google Scholar](https://scholar.google.com/citations?user=X8Y3rQIAAAAJ&hl=en) page.
 
 * M. Hasan, Jeremy Holleman  
+  **Spiking Sparse Coding Algorithm with ReducedInhibitory Feedback Weights**  
+  *2020 IEEE 63rd International Midwest Symposium on Circuits and Systems (MWSCAS)*, 2020
+  [[BibTeX]](javascript:toggleBibtex('Hasan2020-3')) [[PDF]]( )  
+  <div id="bib_Hasan2020-3" class="bibtex noshow">  
+  <pre>  
+  @inproceedings{Hasan2020-2,
+    author = "Hasan, M. Munir and Holleman, Jeremy",
+    doi = "",
+    url = "",
+    year = "2020",
+    publisher = "{IEEE}",
+    title = "Spiking Sparse Coding Algorithm with ReducedInhibitory Feedback Weights",
+    booktitle = "2020 {IEEE} International Midwest Symposium on Circuits and Systems ({MWSCAS})"
+}
+  </pre>  
+  </div>  
+
+* M. Hasan, Jeremy Holleman  
+  **Leakage Current Compensation in Large Number ofInactive Synapses in a 130nm CMOS Process**  
+  *2020 IEEE 63rd International Midwest Symposium on Circuits and Systems (MWSCAS)*, 2020
+  [[BibTeX]](javascript:toggleBibtex('Hasan2020-2')) [[PDF]]( )  
+  <div id="bib_Hasan2020-2" class="bibtex noshow">  
+  <pre>  
+  @inproceedings{Hasan2020-2,
+    author = "Hasan, M. Munir and Holleman, Jeremy",
+    doi = "",
+    url = "",
+    year = "2020",
+    publisher = "{IEEE}",
+    title = "Leakage Current Compensation in Large Number ofInactive Synapses in a 130nm CMOS Process",
+    booktitle = "2020 {IEEE} International Midwest Symposium on Circuits and Systems ({MWSCAS})"
+}
+  </pre>  
+  </div>  
+
+* M. Hasan, Jeremy Holleman  
+  **Low Power Compact Analog Spiking NeuronCircuit Using Exponential Positive Feedback With Adaptation and Bursting Capability**  
+  *2020 IEEE 63rd International Midwest Symposium on Circuits and Systems (MWSCAS)*, 2020
+  [[BibTeX]](javascript:toggleBibtex('Hasan2020-1')) [[PDF]]( )  
+  <div id="bib_Hasan2020-1" class="bibtex noshow">  
+  <pre>  
+  @inproceedings{Hasan2020-1,
+    author = "Hasan, M. Munir and Holleman, Jeremy",
+    doi = "",
+    url = "",
+    year = "2020",
+    publisher = "{IEEE}",
+    title = "Low Power Compact Analog Spiking NeuronCircuit Using Exponential Positive Feedback With Adaptation and Bursting Capability",
+    booktitle = "2020 {IEEE} International Midwest Symposium on Circuits and Systems ({MWSCAS})"
+}
+  </pre>  
+  </div>  
+
+* M. Hasan, Jeremy Holleman  
   **Implementation of Linear Discriminant Classifier in 130nm Silicon Process**  
   *2018 IEEE International Symposium on Circuits and Systems (ISCAS)*, 2018  
   [[BibTeX]](javascript:toggleBibtex('Hasan2018')) [[PDF]](https://doi.org/10.1109/iscas.2018.8351829)  
