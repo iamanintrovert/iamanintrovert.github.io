@@ -43,7 +43,7 @@ You can also visit my [Google Scholar](https://scholar.google.com/citations?user
   </div>  
 
 * M. Hasan, Jeremy Holleman  
-  **Low Power Compact Analog Spiking NeuronCircuit Using Exponential Positive Feedback With Adaptation and Bursting Capability**  
+  **Low Power Compact Analog Spiking Neuron Circuit Using Exponential Positive Feedback With Adaptation and Bursting Capability**  
   *2020 IEEE 63rd International Midwest Symposium on Circuits and Systems (MWSCAS)*, 2020
   [[BibTeX]](javascript:toggleBibtex('Hasan2020-1')) [[PDF]]( )  
   <div id="bib_Hasan2020-1" class="bibtex noshow">  
@@ -54,7 +54,7 @@ You can also visit my [Google Scholar](https://scholar.google.com/citations?user
     url = "",
     year = "2020",
     publisher = "{IEEE}",
-    title = "Low Power Compact Analog Spiking NeuronCircuit Using Exponential Positive Feedback With Adaptation and Bursting Capability",
+    title = "Low Power Compact Analog Spiking Neuron Circuit Using Exponential Positive Feedback With Adaptation and Bursting Capability",
     booktitle = "2020 {IEEE} International Midwest Symposium on Circuits and Systems ({MWSCAS})"
 }
   </pre>  
