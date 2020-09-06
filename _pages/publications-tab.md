@@ -7,15 +7,15 @@ permalink: /publications/
 You can also visit my [Google Scholar](https://scholar.google.com/citations?user=X8Y3rQIAAAAJ&hl=en) page.
 
 * M. Hasan, Jeremy Holleman  
-  **Spiking Sparse Coding Algorithm with ReducedInhibitory Feedback Weights**  
+  **Spiking Sparse Coding Algorithm with Reduced Inhibitory Feedback Weights**  
   *2020 IEEE 63rd International Midwest Symposium on Circuits and Systems (MWSCAS)*, 2020
-  [[BibTeX]](javascript:toggleBibtex('Hasan2020-3')) [[PDF]]( )  
+  [[BibTeX]](javascript:toggleBibtex('Hasan2020-3')) [[PDF]](https://ieeexplore.ieee.org/document/9184547)  
   <div id="bib_Hasan2020-3" class="bibtex noshow">  
   <pre>  
   @inproceedings{Hasan2020-2,
     author = "Hasan, M. Munir and Holleman, Jeremy",
-    doi = "",
-    url = "",
+    doi = "10.1109/MWSCAS48704.2020.9184547",
+    url = "https://ieeexplore.ieee.org/document/9184547",
     year = "2020",
     publisher = "{IEEE}",
     title = "Spiking Sparse Coding Algorithm with ReducedInhibitory Feedback Weights",
@@ -25,15 +25,15 @@ You can also visit my [Google Scholar](https://scholar.google.com/citations?user
   </div>  
 
 * M. Hasan, Jeremy Holleman  
-  **Leakage Current Compensation in Large Number ofInactive Synapses in a 130nm CMOS Process**  
+  **Leakage Current Compensation in Large Number of Inactive Synapses in a 130nm CMOS Process**  
   *2020 IEEE 63rd International Midwest Symposium on Circuits and Systems (MWSCAS)*, 2020
-  [[BibTeX]](javascript:toggleBibtex('Hasan2020-2')) [[PDF]]( )  
+  [[BibTeX]](javascript:toggleBibtex('Hasan2020-2')) [[PDF]](https://ieeexplore.ieee.org/document/9184611)  
   <div id="bib_Hasan2020-2" class="bibtex noshow">  
   <pre>  
   @inproceedings{Hasan2020-2,
     author = "Hasan, M. Munir and Holleman, Jeremy",
-    doi = "",
-    url = "",
+    doi = "10.1109/MWSCAS48704.2020.9184611",
+    url = "https://ieeexplore.ieee.org/document/9184611",
     year = "2020",
     publisher = "{IEEE}",
     title = "Leakage Current Compensation in Large Number ofInactive Synapses in a 130nm CMOS Process",
@@ -45,13 +45,13 @@ You can also visit my [Google Scholar](https://scholar.google.com/citations?user
 * M. Hasan, Jeremy Holleman  
   **Low Power Compact Analog Spiking Neuron Circuit Using Exponential Positive Feedback With Adaptation and Bursting Capability**  
   *2020 IEEE 63rd International Midwest Symposium on Circuits and Systems (MWSCAS)*, 2020
-  [[BibTeX]](javascript:toggleBibtex('Hasan2020-1')) [[PDF]]( )  
+  [[BibTeX]](javascript:toggleBibtex('Hasan2020-1')) [[PDF]](https://ieeexplore.ieee.org/document/9184447)  
   <div id="bib_Hasan2020-1" class="bibtex noshow">  
   <pre>  
   @inproceedings{Hasan2020-1,
     author = "Hasan, M. Munir and Holleman, Jeremy",
-    doi = "",
-    url = "",
+    doi = "10.1109/MWSCAS48704.2020.9184447",
+    url = "https://ieeexplore.ieee.org/document/9184447",
     year = "2020",
     publisher = "{IEEE}",
     title = "Low Power Compact Analog Spiking Neuron Circuit Using Exponential Positive Feedback With Adaptation and Bursting Capability",
