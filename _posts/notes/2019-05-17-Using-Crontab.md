@@ -1,3 +1,9 @@
+---
+title: Using Crontab
+categories:
+  - notes
+---
+
 My university workstation is a red hat desktop. It has only one hard disk of 1TB. However, I only get 25GB disk quota for home space. The OS uses all of the hard disk. 
 So I do not have any personal space for storing data on my local hard disk. There are plenty of space in the /tmp/ directory but the files which are more than 10 days old are
 deleted automatically by the OS. If I am able to trick the OS into thinking that the files in /tmp/ are always new then the files will not be deleted and I could use the /tmp/ 
