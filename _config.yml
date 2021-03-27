@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Md Munir Hasan"
-  avatar           : "/assets/site-images/profile.png"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/site-images/p4.jpg"# path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I aspire to become an analog artist who can effortlessly design circuits that implement mathematical functions."
   location         : "Charlotte, NC"
   email            :
